@@ -1,0 +1,20 @@
+<nav class="nav" id="nav">
+  <div class="nav__container">
+    <a href="{{ '/' | relative_url }}" class="nav__logo">
+      <span class="nav__logo-bracket">&lt;</span>OP<span class="nav__logo-bracket">/&gt;</span>
+    </a>
+
+    <button class="nav__toggle" id="navToggle" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+
+    <ul class="nav__links" id="navLinks">
+      <li><a href="{{ '/' | relative_url }}#about" class="nav__link">About</a></li>
+      <li><a href="{{ '/' | relative_url }}#skills" class="nav__link">Skills</a></li>
+      <li><a href="{{ '/' | relative_url }}#projects" class="nav__link">Projects</a></li>
+      <li><a href="{{ '/' | relative_url }}#experience" class="nav__link">Experience</a></li>
+      <li><a href="{{ '/blog/' | relative_url }}" class="nav__link {% if page.url contains '/blog' %}active{% endif %}">Blog</a></li>
+      <li><a href="{{ '/' | relative_url }}#contact" class="nav__link nav__link--cta">Contact</a></li>
+    </ul>
+  </div>
+</nav>

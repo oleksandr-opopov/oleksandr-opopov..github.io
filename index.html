@@ -1,0 +1,265 @@
+---
+layout: default
+title: Oleksandr Popov
+---
+
+<!-- HERO -->
+<section class="hero" id="home">
+  <div class="container hero__container">
+    <div class="hero__content reveal">
+      <p class="hero__greeting">Hello, I'm</p>
+      <h1 class="hero__name">Oleksandr Popov</h1>
+      <div class="hero__title">
+        <span id="typing-text"></span><span class="cursor">|</span>
+      </div>
+      <p class="hero__bio">
+        I craft scalable web applications and developer tools — from elegant frontends to robust APIs.
+        Passionate about clean code, great UX, and open-source.
+      </p>
+      <div class="hero__actions">
+        <a href="#projects" class="btn btn--primary">View My Work</a>
+        <a href="#contact" class="btn btn--outline">Get In Touch</a>
+      </div>
+    </div>
+    <div class="hero__badge reveal reveal--delay">
+      <div class="hero__badge-inner glass-card">
+        <div class="hero__badge-stat">
+          <span class="hero__badge-num">7+</span>
+          <span class="hero__badge-label">Years<br>Experience</span>
+        </div>
+        <div class="hero__badge-divider"></div>
+        <div class="hero__badge-stat">
+          <span class="hero__badge-num">30+</span>
+          <span class="hero__badge-label">Projects<br>Shipped</span>
+        </div>
+        <div class="hero__badge-divider"></div>
+        <div class="hero__badge-stat">
+          <span class="hero__badge-num">∞</span>
+          <span class="hero__badge-label">Coffee<br>Consumed</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <a href="#about" class="hero__scroll" aria-label="Scroll down">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+      <path d="M7 10l5 5 5-5"/>
+    </svg>
+  </a>
+</section>
+
+<!-- ABOUT -->
+<section class="section" id="about">
+  <div class="container">
+    <h2 class="section__title reveal">About <span class="gradient-text">Me</span></h2>
+    <div class="about__grid">
+      <div class="about__text reveal">
+        <p>
+          I'm a Full-Stack Developer based in Ukraine with over 7 years of experience building
+          production-grade web applications. I love working at the intersection of great design
+          and solid engineering.
+        </p>
+        <p>
+          My work spans the full stack — from crafting intuitive React interfaces to designing
+          distributed backend systems and cloud infrastructure. I care deeply about developer
+          experience, system reliability, and writing code that future-me won't hate.
+        </p>
+        <p>
+          When I'm not shipping code, I'm writing about what I've learned, contributing to open-source,
+          or exploring the latest in the developer tooling ecosystem.
+        </p>
+        <div class="about__links">
+          <a href="https://github.com/{{ site.author.github }}" target="_blank" rel="noopener" class="btn btn--outline btn--sm">
+            GitHub Profile →
+          </a>
+          <a href="/assets/resume.pdf" class="btn btn--outline btn--sm">
+            Download CV →
+          </a>
+        </div>
+      </div>
+      <div class="about__card glass-card reveal reveal--delay">
+        <h3>Quick Facts</h3>
+        <ul class="about__facts">
+          <li>
+            <span class="about__fact-icon">◈</span>
+            <span>Based in <strong>Ukraine</strong></span>
+          </li>
+          <li>
+            <span class="about__fact-icon">◈</span>
+            <span>Fluent in <strong>English & Ukrainian</strong></span>
+          </li>
+          <li>
+            <span class="about__fact-icon">◈</span>
+            <span>Open to <strong>remote opportunities</strong></span>
+          </li>
+          <li>
+            <span class="about__fact-icon">◈</span>
+            <span>Contributor to <strong>open-source</strong></span>
+          </li>
+          <li>
+            <span class="about__fact-icon">◈</span>
+            <span>Interested in <strong>distributed systems</strong></span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SKILLS -->
+<section class="section section--alt" id="skills">
+  <div class="container">
+    <h2 class="section__title reveal">Tech <span class="gradient-text">Stack</span></h2>
+    <p class="section__subtitle reveal">Technologies I use to bring ideas to life</p>
+    <div class="skills__grid">
+      {% for category in site.data.skills %}
+      <div class="skill-card glass-card reveal">
+        <div class="skill-card__header">
+          <span class="skill-card__icon">{{ category.icon }}</span>
+          <h3 class="skill-card__title">{{ category.category }}</h3>
+        </div>
+        <div class="skill-card__tags">
+          {% for item in category.items %}
+          <span class="skill-tag">{{ item }}</span>
+          {% endfor %}
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section class="section" id="projects">
+  <div class="container">
+    <h2 class="section__title reveal">Featured <span class="gradient-text">Projects</span></h2>
+    <p class="section__subtitle reveal">Things I've built and shipped</p>
+    <div class="projects__grid">
+      {% for project in site.data.projects %}
+      {% if project.featured %}
+      <article class="project-card glass-card reveal">
+        <div class="project-card__header">
+          <span class="project-card__icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/>
+            </svg>
+          </span>
+          <div class="project-card__links">
+            {% if project.github != "" %}
+            <a href="{{ project.github }}" target="_blank" rel="noopener" aria-label="GitHub">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+            </a>
+            {% endif %}
+            {% if project.demo != "" %}
+            <a href="{{ project.demo }}" target="_blank" rel="noopener" aria-label="Live demo">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+            </a>
+            {% endif %}
+          </div>
+        </div>
+        <h3 class="project-card__title">{{ project.name }}</h3>
+        <p class="project-card__desc">{{ project.description }}</p>
+        <div class="project-card__tech">
+          {% for tech in project.tech %}
+          <span class="tag">{{ tech }}</span>
+          {% endfor %}
+        </div>
+      </article>
+      {% endif %}
+      {% endfor %}
+    </div>
+    <div class="section__cta reveal">
+      <a href="https://github.com/{{ site.author.github }}" target="_blank" rel="noopener" class="btn btn--outline">
+        See All Projects on GitHub →
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- EXPERIENCE -->
+<section class="section section--alt" id="experience">
+  <div class="container">
+    <h2 class="section__title reveal">Work <span class="gradient-text">Experience</span></h2>
+    <p class="section__subtitle reveal">My professional journey</p>
+    <div class="timeline">
+      {% for job in site.data.experience %}
+      <div class="timeline__item reveal">
+        <div class="timeline__marker"></div>
+        <div class="timeline__card glass-card">
+          <div class="timeline__header">
+            <div>
+              <h3 class="timeline__role">{{ job.role }}</h3>
+              <span class="timeline__company">{{ job.company }}</span>
+            </div>
+            <span class="timeline__period">{{ job.period }}</span>
+          </div>
+          <p class="timeline__desc">{{ job.description }}</p>
+          <div class="timeline__tech">
+            {% for tech in job.tech %}
+            <span class="tag">{{ tech }}</span>
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<!-- BLOG PREVIEW -->
+{% if site.posts.size > 0 %}
+<section class="section" id="writing">
+  <div class="container">
+    <h2 class="section__title reveal">Recent <span class="gradient-text">Writing</span></h2>
+    <p class="section__subtitle reveal">Thoughts on engineering, tools, and craft</p>
+    <div class="blog-preview__grid">
+      {% for post in site.posts limit:3 %}
+      <a href="{{ post.url | relative_url }}" class="post-preview glass-card reveal">
+        <div class="post-preview__meta">
+          <time>{{ post.date | date: "%b %d, %Y" }}</time>
+          {% if post.tags.size > 0 %}
+          <span class="tag">{{ post.tags.first }}</span>
+          {% endif %}
+        </div>
+        <h3 class="post-preview__title">{{ post.title }}</h3>
+        <p class="post-preview__excerpt">{{ post.excerpt | strip_html | truncate: 120 }}</p>
+        <span class="post-preview__cta">Read more →</span>
+      </a>
+      {% endfor %}
+    </div>
+    <div class="section__cta reveal">
+      <a href="{{ '/blog/' | relative_url }}" class="btn btn--outline">All Posts →</a>
+    </div>
+  </div>
+</section>
+{% endif %}
+
+<!-- CONTACT -->
+<section class="section section--alt" id="contact">
+  <div class="container">
+    <h2 class="section__title reveal">Get In <span class="gradient-text">Touch</span></h2>
+    <p class="section__subtitle reveal">
+      Open to new opportunities, interesting projects, or just a good conversation about tech.
+    </p>
+    <div class="contact__grid">
+      <div class="contact__card glass-card reveal">
+        <h3>Let's Connect</h3>
+        <p>The best way to reach me is by email. I try to respond within 24–48 hours.</p>
+        <a href="mailto:{{ site.author.email }}" class="btn btn--primary contact__email">
+          {{ site.author.email }}
+        </a>
+        <div class="contact__socials">
+          <a href="https://github.com/{{ site.author.github }}" target="_blank" rel="noopener" class="contact__social-link">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+            GitHub
+          </a>
+          {% if site.author.linkedin != "" %}
+          <a href="https://linkedin.com/in/{{ site.author.linkedin }}" target="_blank" rel="noopener" class="contact__social-link">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+            LinkedIn
+          </a>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,38 @@
+- category: Frontend
+  icon: "⬡"
+  items:
+    - React
+    - TypeScript
+    - Next.js
+    - Tailwind CSS
+    - Vue.js
+    - HTML & CSS
+
+- category: Backend
+  icon: "⚙"
+  items:
+    - Node.js
+    - Python
+    - Ruby on Rails
+    - GraphQL
+    - REST APIs
+    - WebSockets
+
+- category: DevOps & Cloud
+  icon: "◈"
+  items:
+    - Docker
+    - AWS
+    - GitHub Actions
+    - Kubernetes
+    - Terraform
+    - CI/CD Pipelines
+
+- category: Databases
+  icon: "◎"
+  items:
+    - PostgreSQL
+    - MongoDB
+    - Redis
+    - MySQL
+    - Elasticsearch

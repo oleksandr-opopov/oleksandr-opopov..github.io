@@ -1,0 +1,17 @@
+- company: Tech Company Inc.
+  role: Senior Full-Stack Developer
+  period: "2022 – Present"
+  description: Lead the architecture and development of microservices powering millions of users. Drive technical decisions, mentor engineers, and own the delivery of core platform features.
+  tech: [React, Node.js, AWS, PostgreSQL]
+
+- company: StartUp Labs
+  role: Full-Stack Developer
+  period: "2020 – 2022"
+  description: Shipped product features end-to-end in a fast-paced startup environment. Improved overall application performance by 40% through profiling and targeted optimization.
+  tech: [Vue.js, Python, Docker, MongoDB]
+
+- company: Digital Agency
+  role: Junior Frontend Developer
+  period: "2018 – 2020"
+  description: Built responsive web interfaces for clients across multiple industries. Collaborated closely with designers to produce pixel-perfect, accessible UIs.
+  tech: [JavaScript, React, CSS, WordPress]

@@ -1,0 +1,32 @@
+title: Oleksandr Popov
+tagline: Full-Stack Developer
+description: Building elegant solutions to complex problems
+baseurl: ""
+url: "https://oleksandr-opopov.github.io"
+
+author:
+  name: Oleksandr Popov
+  email: oleksandr.o.popov@gmail.com
+  github: oleksandr-opopov
+  linkedin: oleksandr-popov
+  twitter: ""
+
+markdown: kramdown
+highlighter: rouge
+
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+permalink: /blog/:year/:month/:day/:title/
+
+sass:
+  style: compressed
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor
+  - .gitignore

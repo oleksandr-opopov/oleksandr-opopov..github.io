@@ -1,0 +1,31 @@
+---
+layout: default
+---
+<article class="post">
+  <div class="container">
+    <header class="post__header reveal">
+      <div class="post__meta">
+        <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%B %d, %Y" }}</time>
+        {% if page.tags.size > 0 %}
+        <div class="post__tags">
+          {% for tag in page.tags %}
+          <span class="tag">{{ tag }}</span>
+          {% endfor %}
+        </div>
+        {% endif %}
+      </div>
+      <h1 class="post__title">{{ page.title }}</h1>
+      {% if page.description %}
+      <p class="post__description">{{ page.description }}</p>
+      {% endif %}
+    </header>
+
+    <div class="post__body glass-card reveal">
+      {{ content }}
+    </div>
+
+    <footer class="post__footer reveal">
+      <a href="{{ '/blog/' | relative_url }}" class="btn btn--outline">&larr; Back to Blog</a>
+    </footer>
+  </div>
+</article>

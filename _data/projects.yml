@@ -1,0 +1,27 @@
+- name: Project Alpha
+  description: A full-stack web application with real-time collaboration features, cloud storage integration, and a responsive design serving thousands of users.
+  tech: [React, Node.js, PostgreSQL, AWS]
+  github: "https://github.com/oleksandr-opopov"
+  demo: ""
+  featured: true
+
+- name: DevFlow CLI
+  description: A command-line productivity tool that automates developer workflows — code generation, test scaffolding, and one-command deployments.
+  tech: [Python, Click, Docker]
+  github: "https://github.com/oleksandr-opopov"
+  demo: ""
+  featured: true
+
+- name: API Gateway Service
+  description: A scalable microservice gateway with rate limiting, JWT authentication, and intelligent request routing built for high-throughput systems.
+  tech: [Node.js, Redis, Docker, nginx]
+  github: "https://github.com/oleksandr-opopov"
+  demo: ""
+  featured: true
+
+- name: Data Visualizer
+  description: An interactive analytics dashboard with customizable charts, real-time data streaming, and export capabilities for complex datasets.
+  tech: [Vue.js, D3.js, Python, FastAPI]
+  github: "https://github.com/oleksandr-opopov"
+  demo: ""
+  featured: false
